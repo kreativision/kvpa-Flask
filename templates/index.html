@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link type="text/css" rel="stylesheet" href="../static/materialize/css/materialize.min.css" media="screen,projection" />
+  <link type="text/css" rel="stylesheet" href="../static/css/scrollbar.css" />
+  <link type="text/css" rel="stylesheet" href="../static/css/built_styles.css" />
+  <meta charset="UTF-8">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home</title>
+</head>
+
+<body>
+  <!-- Navigation -->
+  <section name="Navigation">
+    <nav class="navigation-bar" id="nav">
+      <div class="nav-wrapper">
+        <a href="#" class="brand-logo">&nbsp;<img src="../static/assets/card image.png" width="50px" height="50px">&nbsp;</a>
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger">
+          <i class="material-icons">menu</i>
+        </a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li>
+            <a href="#" id="home" onclick="activate('home')"
+              class="waves-effect waves-light btn-flat nav-btn active">Home</a>
+          </li>
+          <li>
+            <a href="#" id="about" onclick="activate('about')" class="waves-effect waves-light btn-flat nav-btn">About
+              Us</a>
+          </li>
+          <li>
+            <a href="#" id="services" onclick="activate('services')"
+              class="waves-effect waves-light btn-flat nav-btn">Services</a>
+          </li>
+          <li>
+            <a href="#" id="contact" onclick="activate('contact')"
+              class="waves-effect waves-light btn-flat nav-btn">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <ul class="sidenav" id="mobile-demo">
+      <li>
+        <a href="#" class="sidenav-close">
+          <i class="material-icons">close</i>
+        </a>
+      </li>
+      <!-- <li><a href="#" class="sidenav-button">Home</a></li> -->
+      <!-- <li><a href="#" class="sidenav-button">About Us</a></li> -->
+      <!-- <li><a href="service-details.html" class="sidenav-button">Services</a></li> -->
+      <li><a href="/sign-up" class="sidenav-button">Login/Sign-Up</a></li>
+    </ul>
+  </section>
+
+  <section name="body" class="body">
+    <div class="header">
+      <h2 class="color-text">Welcome to KreatiVision PhotoArts</h1>
+        <h6 class="white-text">A one-stop-shop for all you branding and graphics needs!</h6>
+    </div>
+    <hr class="separator" id="top-separator" style="width: 40%;">
+    <div class="row">
+      <div class="col s12 m6">
+        <div class="card z-depth-0 glow">
+          <div class="card-content white-text">
+            <span class="card-title">Launch Offer !!</span>
+            <span class="card-subtitle">20% off on all orders above ₹ 599/-</span><br>
+          </div>
+          <div class="cad-actions">
+            <button class="btn white black-text waves-effect waves">Learn More</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col s12 m6">
+        <div class="card z-depth-3 blue darken-1">
+          <div class="card-content">
+            <span class="card-title">Additional content in a card.</span>
+            <p class="white-text">Slide from ledt edge of screen to open the side-nav on mobile devices</p>
+          </div>
+          <div class="card-actions">
+            <button class="btn-flat blue darken-3 waves-effect waves-light">
+              Some Button
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col s12 m6">
+        <div class="card z-depth-3 pink darken-1">
+          <div class="card-content">
+            <span class="card-title">Another card content here!</span>
+            <p class="white-text">Notice how to top bar changes color on scrolling past the header</p>
+          </div>
+          <div class="card-actions">
+            <button class="btn-flat pink darken-3 waves-effect waves-light">
+              Some other button
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col s12 m6">
+        <div class="card z-depth-3 pink darken-1">
+          <div class="card-content">
+            <span class="card-title">Another card content here!</span>
+            <p class="white-text">Notice how to top bar changes color on scrolling past the header</p>
+          </div>
+          <div class="card-actions">
+            <button class="btn-flat pink darken-3 waves-effect waves-light">
+              Some other button
+            </button>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col s12 m6">
+        <div class="card z-depth-3 blue darken-1">
+          <div class="card-content">
+            <span class="card-title">Additional content in a card.</span>
+            <p class="white-text">Slide from ledt edge of screen to open the side-nav on mobile devices</p>
+          </div>
+          <div class="card-actions">
+            <button class="btn-flat blue darken-3 waves-effect waves-light">
+              Some Button
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+
+  <script type="text/javascript" src="../static/js/UI_modifier.js"></script>
+  <script type="text/javascript" src="../static/materialize/js/materialize.min.js"></script>
+</body>
+
+</html>

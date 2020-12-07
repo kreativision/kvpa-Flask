@@ -1,0 +1,139 @@
+$gradient-top-left: #320764;
+$gradient-bottom-right: #306195;
+$nav-box-shadow: rgba(0, 31, 168, 0.384);
+$aliceblue: aliceblue;
+$transparent_white_01: rgba(255, 255, 255, 0.1);
+$transparent_white_02: rgba(255, 255, 255, 0.25);
+$transparent_white_03: rgba(255, 255, 255, 0.35);
+$transparent_black_01: rgba(0, 0, 0, 0.1);
+$transparent_black_02: rgba(0, 0, 0, 0.25);
+$transparent_black_03: rgba(0, 0, 0, 0.35);
+$focus_ring: 1px dashed rgba(255, 255, 255, 0.5);
+
+.navigation-bar {
+    position: fixed;
+    top: 0px;
+    z-index: 99;
+    a.nav-btn {
+        border-radius: 0px !important;
+        &:focus,
+        &:hover {
+            background-color: $transparent_white_01;
+        }
+    }
+}
+
+.solid-nav {
+    background-image: linear-gradient(to bottom right, $gradient-top-left, $gradient-bottom-right);
+    box-shadow: 0px 5px 5px $nav-box-shadow;
+}
+
+nav {
+    background-color: transparent !important;
+    box-shadow: none !important;
+}
+
+body {
+    /* background-image: linear-gradient(to bottom right, #320764, #306195); */
+    background-image: url("../assets/headder\ 2.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.brand-logo {
+    margin-top: 0.7%;
+    &:focus {
+        outline: none;
+    }
+}
+
+.sidenav {
+    padding-top: 20px;
+    width: 100%;
+    background-image: linear-gradient(to bottom right, $gradient-top-left, $gradient-bottom-right);
+    width: 100%;
+}
+
+// .sidenav-color {
+//     background-image: -webkit-linear-gradient(to bottom right, $gradient-top-left, $gradient-bottom-right);
+//     // background-color: $gradient-bottom-right;
+// }
+
+a.sidenav-button,
+a.sidenav-close i,
+a.nav-btn {
+    font-weight: 600;
+    color: $aliceblue !important;
+}
+
+a.sidenav-close {
+    text-align: right;
+    &:focus {
+        outline: none;
+    }
+}
+
+a.active {
+    border-bottom: 3px solid aliceblue;
+}
+
+.go-back {
+    margin: 15px;
+    // button:hover {
+    //     background: $transparent_white;
+    // }
+}
+
+.signup-card {
+    margin-top: 10%;
+    background-color: $transparent_black_03;
+    backdrop-filter: blur(5px);
+    input {
+        color: white;
+    }
+
+    .helper-text {
+        color: $transparent_white_03;
+    }
+
+    .create-btn {
+        background: transparent;
+        &:hover {
+            background: $transparent_white_01;
+        }
+        &:focus {
+            outline: $focus_ring;
+        }
+        &:active {
+            background: $transparent_white_03;
+        }
+    }
+
+    .agreement {
+        span {
+            color: rgba(255, 255, 255, 0.7);
+        }
+        a {
+            color: white;
+            font-weight: 600;
+            text-transform: capitalize;
+        }
+    }
+
+    .card-actions {
+        margin-top: 25px;
+    }
+
+    [type="checkbox"] + span:not(.lever):before,
+    [type="checkbox"]:not(.filled-in) + span:not(.lever):after {
+        border: 2px solid #ffffff !important;
+        border-radius: 3px;
+    }
+
+    [type="checkbox"]:checked + span:not(.lever):before {
+        border-top: 2px solid transparent !important;
+        border-left: 2px solid transparent !important;
+        border-right: 2px solid #ffffff;
+        border-bottom: 2px solid #ffffff;
+    }
+}

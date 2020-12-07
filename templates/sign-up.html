@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="../static/materialize/css/materialize.min.css"
+        media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="../static/css/scrollbar.css" />
+    <link type="text/css" rel="stylesheet" href="../static/css/built_styles.css" />
+    <title>Sign Up</title>
+</head>
+
+<body>
+    <div class="go-back">
+        <button class="waves-effect waves-light waves-ripple btn-floating teal">
+            <a href="/"><i class="material-icons">keyboard_arrow_left</i></a>
+        </button>
+    </div>
+
+    <div class="row">
+        <div class="col s12 m6 offset-m3">
+            <div class="card z-depth-3 signup-card">
+                <div class="card-content white-text">
+                    <span class="card-title">Sign-Up to explore all Features!</span>
+                    <form action="">
+                        <div class="input-field">
+                            <i class="material-icons prefix">account_circle</i>
+                            <input id="first_name" type="text" class="validate" placeholder="Name" required>
+                        </div>
+                        <div class="input-field">
+                            <i class="material-icons prefix">phone</i>
+                            <input id="ph_no" type="text" class="validate" placeholder="Phone Number" maxlength="10" minlength="10" required>
+                        </div>
+                        <div class="input-field">
+                            <i class="material-icons prefix">mail</i>
+                            <input id="email" type="email" class="validate" placeholder="E-Mail ID" required>
+                            <span class="helper-text" data-error="This is not a valid email ID" data-success="right">Please provide a valid email address</span>
+                        </div>
+                        <label class="agreement">
+                            <input type="checkbox" class="white" name="tnc" id="tnc" required>
+                            <span>I agree to the <a href="#" target="_blank">Terms and Conditions</a> of Using the services provided on this platform.</span>
+                        </label>
+                        <div class="card-actions">
+                            <button type="submit" class="btn-flat white-text create-btn">Create Account</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

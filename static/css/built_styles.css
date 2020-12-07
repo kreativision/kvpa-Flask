@@ -1,0 +1,112 @@
+.navigation-bar {
+  position: fixed;
+  top: 0px;
+  z-index: 99;
+}
+.navigation-bar a.nav-btn {
+  border-radius: 0px !important;
+}
+.navigation-bar a.nav-btn:focus, .navigation-bar a.nav-btn:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.solid-nav {
+  background-image: linear-gradient(to bottom right, #320764, #306195);
+  box-shadow: 0px 5px 5px rgba(0, 31, 168, 0.384);
+}
+
+nav {
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+body {
+  /* background-image: linear-gradient(to bottom right, #320764, #306195); */
+  background-image: url("../assets/headder 2.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.brand-logo {
+  margin-top: 0.7%;
+}
+.brand-logo:focus {
+  outline: none;
+}
+
+.sidenav {
+  padding-top: 20px;
+  width: 100%;
+  background-image: linear-gradient(to bottom right, #320764, #306195);
+  width: 100%;
+}
+
+a.sidenav-button,
+a.sidenav-close i,
+a.nav-btn {
+  font-weight: 600;
+  color: aliceblue !important;
+}
+
+a.sidenav-close {
+  text-align: right;
+}
+a.sidenav-close:focus {
+  outline: none;
+}
+
+a.active {
+  border-bottom: 3px solid aliceblue;
+}
+
+.go-back {
+  margin: 15px;
+}
+
+.signup-card {
+  margin-top: 10%;
+  background-color: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(5px);
+}
+.signup-card input {
+  color: white;
+}
+.signup-card .helper-text {
+  color: rgba(255, 255, 255, 0.35);
+}
+.signup-card .create-btn {
+  background: transparent;
+}
+.signup-card .create-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+.signup-card .create-btn:focus {
+  outline: 1px dashed rgba(255, 255, 255, 0.5);
+}
+.signup-card .create-btn:active {
+  background: rgba(255, 255, 255, 0.35);
+}
+.signup-card .agreement span {
+  color: rgba(255, 255, 255, 0.7);
+}
+.signup-card .agreement a {
+  color: white;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+.signup-card .card-actions {
+  margin-top: 25px;
+}
+.signup-card [type=checkbox] + span:not(.lever):before,
+.signup-card [type=checkbox]:not(.filled-in) + span:not(.lever):after {
+  border: 2px solid #ffffff !important;
+  border-radius: 3px;
+}
+.signup-card [type=checkbox]:checked + span:not(.lever):before {
+  border-top: 2px solid transparent !important;
+  border-left: 2px solid transparent !important;
+  border-right: 2px solid #ffffff;
+  border-bottom: 2px solid #ffffff;
+}
+
+/*# sourceMappingURL=built_styles.css.map */
