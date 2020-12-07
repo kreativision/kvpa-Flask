@@ -25,11 +25,18 @@
                 <div class="card-content white-text">
                     <span class="card-title">Sign-Up to explore all Features!</span>
                     <form action="" class="form">
-                        <div class="input-field">
-                            <i class="material-icons prefix">account_circle</i>
-                            <input id="first_name" type="text" class="validate" required>
-                            <label for="first_name">Name</label>
-                            <span class="helper-text" data-error="Name is Required!"></span>
+                        <div class="row">
+                            <div class="input-field col s12 m6">
+                                <!-- <i class="material-icons prefix">account_circle</i> -->
+                                <input id="first_name" type="text" class="validate" required>
+                                <label for="first_name">First Name</label>
+                                <span class="helper-text" data-error="Name is Required!"></span>
+                            </div>
+                            <div class="input-field col s12 m6">
+                                <!-- <i class="material-icons prefix">account_circle</i> -->
+                                <input id="last_name" type="text" class="validate">
+                                <label for="last_name">Last Name</label>
+                            </div>
                         </div>
                         <div class="input-field">
                             <i class="material-icons prefix">phone</i>
@@ -38,10 +45,16 @@
                             <span class="helper-text" data-error="Phone number is Required!"></span>
                         </div>
                         <div class="input-field">
+                            <i class="material-icons prefix">security</i>
+                            <input id="password" type="password" class="validate" required>
+                            <label for="password">Password</label>
+                            <span class="helper-text" data-error="Password"></span>
+                        </div>
+                        <div class="input-field">
                             <i class="material-icons prefix">mail</i>
-                            <input id="email" type="email" class="validate" placeholder="E-Mail ID" required>
-                            <span class="helper-text" data-error="This is not a valid email ID"
-                                data-success="right">Please provide a valid email address</span>
+                            <input id="email" type="email" class="validate">
+                            <label for="email">E-Mail ID</label>
+                            <span class="helper-text" data-error="This is not a valid email ID">(optional)</span>
                         </div>
                         <label class="agreement">
                             <input type="checkbox" class="white" name="tnc" id="tnc" required>
