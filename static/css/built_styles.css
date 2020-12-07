@@ -68,6 +68,9 @@ a.active {
   background-color: rgba(0, 0, 0, 0.35);
   backdrop-filter: blur(5px);
 }
+.signup-card form.form {
+  margin-top: 25px;
+}
 .signup-card input {
   color: white;
 }
@@ -93,12 +96,12 @@ a.active {
   color: white;
   font-weight: 600;
   text-transform: capitalize;
+  text-decoration: underline;
 }
 .signup-card .card-actions {
   margin-top: 25px;
 }
-.signup-card [type=checkbox] + span:not(.lever):before,
-.signup-card [type=checkbox]:not(.filled-in) + span:not(.lever):after {
+.signup-card [type=checkbox] + span:not(.lever):before {
   border: 2px solid #ffffff !important;
   border-radius: 3px;
 }
@@ -107,6 +110,23 @@ a.active {
   border-left: 2px solid transparent !important;
   border-right: 2px solid #ffffff;
   border-bottom: 2px solid #ffffff;
+}
+.signup-card input:not([type]):focus:not([readonly]),
+.signup-card input[type=text]:not(.browser-default):focus:not([readonly]),
+.signup-card input[type=password]:not(.browser-default):focus:not([readonly]),
+.signup-card input[type=email]:not(.browser-default):focus:not([readonly]),
+.signup-card input[type=url]:not(.browser-default):focus:not([readonly]),
+.signup-card input[type=time]:not(.browser-default):focus:not([readonly]),
+.signup-card input[type=date]:not(.browser-default):focus:not([readonly]),
+.signup-card input[type=datetime]:not(.browser-default):focus:not([readonly]),
+.signup-card input[type=datetime-local]:not(.browser-default):focus:not([readonly]),
+.signup-card input[type=tel]:not(.browser-default):focus:not([readonly]),
+.signup-card input[type=number]:not(.browser-default):focus:not([readonly]),
+.signup-card input[type=search]:not(.browser-default):focus:not([readonly]),
+.signup-card textarea.materialize-textarea:focus:not([readonly]) {
+  border-bottom: 1px solid #ffffff;
+  -webkit-box-shadow: 0 1px 0 0 #ffffff;
+  box-shadow: 0 1px 0 0 #ffffff;
 }
 
 /*# sourceMappingURL=built_styles.css.map */
