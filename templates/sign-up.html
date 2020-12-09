@@ -44,17 +44,21 @@
                             <label for="ph_no">Phone</label>
                             <span class="helper-text" data-error="Phone number is Required!"></span>
                         </div>
-                        <div class="input-field">
+                        <div class="input-field pwd">
                             <i class="material-icons prefix">security</i>
+                            <!-- <i class="material-icons right">visibility</i> -->
                             <input id="password" type="password" class="validate" required>
                             <label for="password">Password</label>
-                            <span class="helper-text" data-error="Password"></span>
                         </div>
-                        <div class="input-field">
+                        <label class="pwd-visibility">
+                            <input type="checkbox" class="white" name="pwd" id="pwd" onclick="togglePwd()">
+                            <span>Show password</span>
+                        </label>
+                        <div class="input-field email">
                             <i class="material-icons prefix">mail</i>
                             <input id="email" type="email" class="validate">
-                            <label for="email">E-Mail ID</label>
-                            <span class="helper-text" data-error="This is not a valid email ID">(optional)</span>
+                            <label for="email">E-Mail ID <em>(optional)</em></label>
+                            <span class="helper-text" data-error="This is not a valid email ID"></span>
                         </div>
                         <label class="agreement">
                             <input type="checkbox" class="white" name="tnc" id="tnc" required>
@@ -70,7 +74,7 @@
         </div>
     </div>
 
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> -->
+    <script src="../static/js/signup-form.js"></script>
     <script src="../static/materialize/js/materialize.min.js"></script>
 </body>
 

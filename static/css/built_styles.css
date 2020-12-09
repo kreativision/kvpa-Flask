@@ -64,15 +64,29 @@ a.active {
 }
 
 .signup-card {
-  margin-top: 25px;
+  margin-top: 10px;
   background-color: rgba(0, 0, 0, 0.35);
   backdrop-filter: blur(5px);
+  height: 500px;
+  border-radius: 5px;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 .signup-card form.form {
   margin-top: 25px;
 }
 .signup-card input {
   color: white;
+}
+.signup-card .pwd {
+  margin-bottom: 0px;
+}
+.signup-card .pwd-visibility {
+  margin-bottom: 30px;
+  margin-left: 45px;
+}
+.signup-card .email {
+  margin-top: 25px;
 }
 .signup-card .helper-text {
   color: rgba(255, 255, 255, 0.35);
