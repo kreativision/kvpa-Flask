@@ -1,0 +1,111 @@
+{% extends 'main.html' %}
+
+{% block page_css %}
+<link rel="stylesheet" href="{{url_for('static', filename='css/auth.css')}}">
+{% endblock page_css %}
+
+{% block nav_links%}
+<li class="nav-item">
+  <a class="nav-link" href="{{url_for('home')}}">Home</a>
+</li>
+<li class="nav-item">
+  <a class="nav-link" href="{{url_for('login')}}">Login</a>
+</li>
+<li class="nav-item active">
+  <a class="nav-link" href=" {{url_for('register')}} ">Register</a>
+</li>
+{% endblock nav_links %}
+
+{% block form %}
+<div class="row">
+  <!-- <div class="col-md-6 col-lg-6 col-sm-12"></div> -->
+  <div class="col-md-6 col-lg-6 col-sm-12">
+    <div class="card text-white">
+      <div class="card-header"><h3>Join Today</h3></div>
+      <div class="card-body">
+        <form action="" method="post">
+          <!-- for something called a "CSRF token!" -> need to research! -->
+          {{form.hidden_tag()}}
+          <fieldset>
+            
+            <div class="form-group">
+              {% if form.username.errors %}
+                {{form.username(class="form-control is-invalid")}}
+                <div class="invalid-feedback">
+                  {% for error in form.username.errors%}
+                    <span>✘&nbsp;{{error}}</span>
+                  {% endfor %}
+                </div>
+                {% else %}            
+                  {{form.username(class="form-control")}}
+              {% endif %}
+              {{form.username.label(class="form-control-label")}}
+            </div>
+            
+            <div class="form-group">
+              {% if form.email.errors %}
+                {{form.email(class="form-control is-invalid")}}
+                <div class="invalid-feedback">
+                  {% for error in form.email.errors %}
+                    <span>✘&nbsp;{{error}}</span>
+                  {% endfor %}
+                </div>
+                {% else %}
+                {{form.email(class="form-control")}}
+              {% endif %}             
+              {{form.email.label(class="form-control-label")}}    
+            </div>
+            
+            <div class="form-group">
+              {% if form.password.errors %}
+                {{form.password(class="form-control is-invalid")}}
+                <div class="invalid-feedback">
+                  {% for error in form.password.errors %}
+                    <span>✘&nbsp;{{error}}</span>
+                  {% endfor %}
+                </div>
+                {% else %}
+                {{form.password(class="form-control")}}
+              {% endif %}
+              {{form.password.label(class="form-control-label")}}
+            </div>
+            <div class="form-check" id="pw_visibility">
+              <input class="form-check-input" type="checkbox" id="visibility">
+              <label class="form-check-label" for="visibility" onclick="visibility()">
+                Show Password.
+              </label>
+            </div>
+            
+            <div class="form-group">
+              {% if form.cnf_password.errors %}
+                {{form.cnf_password(class="form-control is-invalid")}}
+                <div class="invalid-feedback">
+                  {% for error in form.cnf_password.errors %}
+                    <span>✘&nbsp;Passwords don't match!</span>
+                  {% endfor %}
+                </div>
+                {% else %}
+                {{form.cnf_password(class="form-control")}}
+              {% endif %}
+              {{form.cnf_password.label(class="form-control-label")}}
+            </div>
+          </fieldset>
+          
+          <div class="form-group">
+            {{form.submit(class="btn btn-outline-info")}}
+          </div>
+        </form>
+        <div class="border-top pt-3">
+          <small>
+            Already have an Account? <a href="{{url_for('login')}}" class="ml-2">Sign In.</a>
+          </small>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock form %}
+
+{% block page_script %}
+<script src="{{url_for('static', filename='/js/form.js')}}"></script>
+{% endblock %}

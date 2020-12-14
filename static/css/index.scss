@@ -1,0 +1,33 @@
+html {
+    background-image: url("../assets/bg_1.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+body {
+    background-color: transparent !important;
+}
+
+nav.navbar {
+    position: fixed !important;
+    top: 0px !important;
+    z-index: 10 !important;
+    width: 100%;
+    background-color: transparent !important;
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba($color: #fff, $alpha: 0.18);
+    .navbar-toggler:focus {
+        outline: none !important;
+    }
+    .nav-link {
+        margin-left: 10px;
+    }
+}
+
+main {
+    position: fixed;
+    top: 56px;
+    height: calc(100vh - 56px);
+    width: 100%;
+    overflow: auto;
+}

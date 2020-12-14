@@ -1,0 +1,131 @@
+$card-bg-transparent: rgba(0, 0, 0, 0.2);
+$card-border: 1px solid rgba(255, 255, 255, 0.15);
+$card-transparency: blur(15px);
+$invalid-feedback-color: #ff6b6b;
+$inactive-field: #ffffff7e;
+
+html {
+    background-image: url("../assets/headder\ 2.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+body {
+    background-color: transparent !important;
+}
+
+main {
+    position: fixed;
+    top: 56px;
+    height: calc(100vh - 56px);
+    width: 100%;
+    overflow: auto;
+}
+
+.alert {
+    margin-top: 25px;
+}
+
+nav.navbar {
+    position: fixed !important;
+    top: 0px !important;
+    z-index: 10 !important;
+    width: 100%;
+    background-color: transparent !important;
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba($color: #fff, $alpha: 0.18);
+    .navbar-toggler:focus {
+        outline: none !important;
+    }
+    .nav-link {
+        margin-left: 10px;
+    }
+}
+
+.card {
+    background-color: $card-bg-transparent !important;
+    backdrop-filter: $card-transparency;
+    border: $card-border !important;
+    margin-top: 25px;
+    .card-header {
+        border-bottom: $card-border !important;
+        background-color: transparent !important;
+    }
+    .card-body {
+        padding-top: 0px !important;
+    }
+    fieldset {
+        margin-top: -10px;
+        #pw_visibility {
+            margin-top: -20px;
+            label {
+                cursor: pointer;
+                color: $inactive-field !important;
+                &:active {
+                    color: white !important;
+                }
+            }
+        }
+    }
+    .form-group {
+        position: relative;
+        margin-bottom: 1.5rem !important;
+        .form-control {
+            margin-top: 40px;
+            background-color: transparent !important;
+            color: white !important;
+            border-bottom: 2px solid $inactive-field;
+            border-top: none !important;
+            border-left: none !important;
+            border-right: none !important;
+            border-radius: 0px !important;
+            padding-left: 0px !important;
+            transition: all 0.3s ease;
+            ~ .form-control-label {
+                color: $inactive-field;
+                margin-bottom: 0px !important;
+                position: absolute !important;
+                top: 10px !important;
+                left: 0px !important;
+                transition: all 0.3s ease;
+            }
+            &:focus {
+                border-bottom: 2px solid white;
+                outline: none !important;
+                box-shadow: none;
+                ~ .form-control-label {
+                    color: white;
+                    font-size: 12px;
+                    transform: translateY(-25px);
+                }
+            }
+            & ~ label.active {
+                font-size: 12px;
+                transform: translateY(-25px);
+            }
+        }
+        .is-invalid {
+            border-color: $invalid-feedback-color !important;
+        }
+        .invalid-feedback {
+            color: $invalid-feedback-color !important;
+        }
+    }
+    .btn {
+        margin-top: 20px;
+        font-weight: 600;
+        letter-spacing: 1px;
+    }
+    small {
+        a {
+            color: white;
+            font-weight: 600;
+            text-decoration: underline;
+            &:focus {
+                outline: 1px dashed $inactive-field;
+            }
+        }
+    }
+}
+
+

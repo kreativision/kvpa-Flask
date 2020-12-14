@@ -1,0 +1,148 @@
+html {
+  background-image: url("../assets/headder 2.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+body {
+  background-color: transparent !important;
+}
+
+main {
+  position: fixed;
+  top: 56px;
+  height: calc(100vh - 56px);
+  width: 100%;
+  overflow: auto;
+}
+
+.alert {
+  margin-top: 25px;
+}
+
+nav.navbar {
+  position: fixed !important;
+  top: 0px !important;
+  z-index: 10 !important;
+  width: 100%;
+  background-color: transparent !important;
+  -webkit-backdrop-filter: blur(15px);
+          backdrop-filter: blur(15px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+nav.navbar .navbar-toggler:focus {
+  outline: none !important;
+}
+
+nav.navbar .nav-link {
+  margin-left: 10px;
+}
+
+.card {
+  background-color: rgba(0, 0, 0, 0.2) !important;
+  -webkit-backdrop-filter: blur(15px);
+          backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  margin-top: 25px;
+}
+
+.card .card-header {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15) !important;
+  background-color: transparent !important;
+}
+
+.card .card-body {
+  padding-top: 0px !important;
+}
+
+.card fieldset {
+  margin-top: -10px;
+}
+
+.card fieldset #pw_visibility {
+  margin-top: -20px;
+}
+
+.card fieldset #pw_visibility label {
+  cursor: pointer;
+  color: #ffffff7e !important;
+}
+
+.card fieldset #pw_visibility label:active {
+  color: white !important;
+}
+
+.card .form-group {
+  position: relative;
+  margin-bottom: 1.5rem !important;
+}
+
+.card .form-group .form-control {
+  margin-top: 40px;
+  background-color: transparent !important;
+  color: white !important;
+  border-bottom: 2px solid #ffffff7e;
+  border-top: none !important;
+  border-left: none !important;
+  border-right: none !important;
+  border-radius: 0px !important;
+  padding-left: 0px !important;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.card .form-group .form-control ~ .form-control-label {
+  color: #ffffff7e;
+  margin-bottom: 0px !important;
+  position: absolute !important;
+  top: 10px !important;
+  left: 0px !important;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.card .form-group .form-control:focus {
+  border-bottom: 2px solid white;
+  outline: none !important;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.card .form-group .form-control:focus ~ .form-control-label {
+  color: white;
+  font-size: 12px;
+  -webkit-transform: translateY(-25px);
+          transform: translateY(-25px);
+}
+
+.card .form-group .form-control ~ label.active {
+  font-size: 12px;
+  -webkit-transform: translateY(-25px);
+          transform: translateY(-25px);
+}
+
+.card .form-group .is-invalid {
+  border-color: #ff6b6b !important;
+}
+
+.card .form-group .invalid-feedback {
+  color: #ff6b6b !important;
+}
+
+.card .btn {
+  margin-top: 20px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.card small a {
+  color: white;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.card small a:focus {
+  outline: 1px dashed #ffffff7e;
+}
+/*# sourceMappingURL=auth.css.map */
