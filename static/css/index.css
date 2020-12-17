@@ -1,5 +1,4 @@
 html {
-  background-image: url("../assets/bg_1.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
@@ -19,12 +18,16 @@ nav.navbar {
   border-bottom: 1px solid rgba(255, 255, 255, 0.18);
 }
 
-nav.navbar .navbar-toggler:focus {
-  outline: none !important;
+nav.navbar .navbar-brand:focus, nav.navbar .navbar-toggler:focus {
+  outline: 1px dashed #ffffff7e !important;
 }
 
 nav.navbar .nav-link {
   margin-left: 10px;
+}
+
+nav.navbar .nav-link:focus {
+  outline: 1px dashed #ffffff7e !important;
 }
 
 main {
@@ -33,5 +36,9 @@ main {
   height: calc(100vh - 56px);
   width: 100%;
   overflow: auto;
+}
+
+html {
+  background-image: url("../assets/bg_1.jpg");
 }
 /*# sourceMappingURL=index.css.map */

@@ -1,0 +1,43 @@
+$card-bg-transparent: rgba(0, 0, 0, 0.2);
+$card-border: 1px solid rgba(255, 255, 255, 0.15);
+$card-transparency: blur(15px);
+$invalid-feedback-color: #ff6b6b;
+$inactive-field: #ffffff7e;
+$focus-outline: 1px dashed $inactive-field;
+
+
+html {
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+body {
+    background-color: transparent !important;
+}
+
+nav.navbar {
+    position: fixed !important;
+    top: 0px !important;
+    z-index: 10 !important;
+    width: 100%;
+    background-color: transparent !important;
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba($color: #fff, $alpha: 0.18);
+    .navbar-brand:focus, .navbar-toggler:focus {
+        outline: $focus-outline !important;
+    }
+    .nav-link {
+        margin-left: 10px;
+        &:focus {
+            outline: $focus-outline !important;
+        }
+    }
+}
+
+main {
+    position: fixed;
+    top: 56px;
+    height: calc(100vh - 56px);
+    width: 100%;
+    overflow: auto;
+}
