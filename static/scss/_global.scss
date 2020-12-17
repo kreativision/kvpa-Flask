@@ -20,17 +20,14 @@ nav.navbar {
     top: 0px !important;
     z-index: 10 !important;
     width: 100%;
-    background-color: transparent !important;
+    background-color: $card-bg-transparent !important;
     backdrop-filter: blur(15px);
-    border-bottom: 1px solid rgba($color: #fff, $alpha: 0.18);
-    .navbar-brand:focus, .navbar-toggler:focus {
+    border-bottom: $card-border;
+    .navbar-brand:focus, .navbar-toggler:focus, .nav-link:focus {
         outline: $focus-outline !important;
     }
     .nav-link {
         margin-left: 10px;
-        &:focus {
-            outline: $focus-outline !important;
-        }
     }
 }
 
