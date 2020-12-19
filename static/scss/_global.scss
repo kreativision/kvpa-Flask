@@ -2,15 +2,18 @@ $card-bg-transparent: rgba(255, 255, 255, 0.2);
 $card-border: 1px solid rgba(0, 0, 0, 0.15);
 $card-border-show: 2px solid rgba(255, 255, 255, 0.2);
 $card-transparency: blur(15px);
-$invalid-feedback-color: #000000a1;
+$invalid-feedback-color: #f50019;
 $invalid-field-border: #f50019;
-$inactive-field: #ffffff8a;
-$active-field: #ffffffff;
+
+$inactive-field: #00000077;
+$active-field: #000;
+
 $focus-outline: 1px dashed $inactive-field;
 $card-shadow-color: rgba($color: #000000, $alpha: 0.3); 
 
 html {
     background-repeat: no-repeat;
+    background-size: cover;
     background-attachment: fixed;
 }
 
@@ -97,7 +100,7 @@ main {
         outline: $focus-outline;
     }
 }
-.btn-success {
+.btn-black {
     background-color: black;
     color: white;
     &:hover {
@@ -111,7 +114,7 @@ main {
         border: 1px solid black;
     }
 }
-.btn-info {
+.btn-white {
     background-color: white;
     color: black;
     &:hover {
@@ -124,4 +127,9 @@ main {
         color: white !important;
         border: 1px solid white;
     }
+}
+
+
+button.close:focus {
+    outline: $focus-outline;
 }

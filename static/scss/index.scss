@@ -5,8 +5,9 @@ html {
 }
 
 .bg-curves {
-    background-image: url("../assets/curves.png");
+    background-image: url("../assets/intro-bg.png");
     background-attachment: fixed;
+    background-size: cover;
     background-repeat: no-repeat;
     min-height: 92%;
     width: 100%;
