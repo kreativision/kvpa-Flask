@@ -1,7 +1,7 @@
 @import '_global.scss';
 
 html {
-    background-image: url("../assets/headder\ 2.jpg");
+    background-image: url("../assets/gradient-1.jpg");
 }
 
 .alert {
@@ -11,11 +11,12 @@ html {
 .card {
     background-color: $card-bg-transparent !important;
     backdrop-filter: $card-transparency;
-    border: $card-border !important;
+    border-radius: 20px;
     margin-top: 25px;
     .card-header {
         border-bottom: $card-border !important;
         background-color: transparent !important;
+        border-bottom: none !important;
     }
     .card-body {
         padding-top: 0px !important;
@@ -33,7 +34,7 @@ html {
                 color: $inactive-field !important;
                 font-size: 14px;
                 &:active {
-                    color: white !important;
+                    color: $active-field !important;
                 }
             }
         }
@@ -43,7 +44,7 @@ html {
             .form-control {
                 margin-top: 40px;
                 background-color: transparent !important;
-                color: white !important;
+                color: $active-field !important;
                 border-bottom: 2px solid $inactive-field;
                 border-top: none !important;
                 border-left: none !important;
@@ -60,11 +61,11 @@ html {
                     transition: all 0.3s ease;
                 }
                 &:focus {
-                    border-bottom: 2px solid white;
+                    border-bottom: 2px solid $active-field;
                     outline: none !important;
                     box-shadow: none;
                     ~ .form-control-label {
-                        color: white;
+                        color: $active-field;
                         font-size: 12px;
                         transform: translateY(-25px);
                     }
@@ -75,20 +76,15 @@ html {
                 }
             }
             .is-invalid {
-                border-color: $invalid-feedback-color !important;
+                border-color: $invalid-field-border !important;
             }
             .invalid-feedback {
                 color: $invalid-feedback-color !important;
             }
         }
     }
-    .btn {
-        margin-top: 20px;
-        font-weight: 600;
-        letter-spacing: 1px;
-    }
     small a {
-        color: white;
+        color: $active-field;
         font-weight: 600;
         text-decoration: underline;
         &:focus {

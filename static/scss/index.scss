@@ -1,5 +1,30 @@
-@import '_global.scss';
+@import "_global.scss";
 
 html {
-    background-image: url("../assets/bg_1.jpg");
+    background-image: url("../assets/gradient-1.jpg");
+}
+
+.bg-curves {
+    background-image: url("../assets/curves.png");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    min-height: 92%;
+    width: 100%;
+    margin-top: 25px;
+    background-color: $card-bg-transparent !important;
+    backdrop-filter: $card-transparency;
+    border-radius: 20px;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    justify-content: right;
+}
+
+.actions {
+    flex-direction: row;
+}
+
+.brand {
+    font-size: 3em;
 }
