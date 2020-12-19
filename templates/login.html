@@ -18,19 +18,17 @@
 {% block form %}
 <div class="container">
   <div class="row">
+    <!-- Alert messages. -->
     <div class="col-md-6 col-lg-6 col-sm-12">
       {% with messages = get_flashed_messages(with_categories=true) %}
-      {% if messages %}
-      {% for category, message in messages %}
-      <div class="alert alert-{{category}}">{{message}}</div>
-      {% endfor %}
-      {% if category == 'success' %}
-      <p class="text-white">You can now login using your <em>E-mail</em> and <em>Password.</em></p>
-      {% endif %}
-      {% endif %}
+        {% if messages %}
+          {% for category, message in messages %}
+            <div class="alert alert-{{category}}">{{message}}</div>
+          {% endfor %}
+        {% endif %}
       {% endwith %}
       <!-- Login-Card -->
-      <div class="card text-white">
+      <div class="card card-light-tr mt-5">
         <div class="card-header">
           <h3>Login. . .</h3>
         </div>
@@ -38,32 +36,36 @@
           <form action="" method="post">
             {{form.hidden_tag()}}
             <fieldset>
-              <div class="form-group">
-                {% if form.email.errors %}
-                {{form.email(class="form-control is-invalid")}}
-                <div class="invalid-feedback">
-                  {% for error in form.email.errors %}
-                  <span>✘&nbsp;{{error}}</span>
-                  {% endfor %}
+              <div class="container f-field">
+                <div class="form-group">
+                  {% if form.email.errors %}
+                  {{form.email(class="form-control is-invalid")}}
+                  <div class="invalid-feedback">
+                    {% for error in form.email.errors %}
+                    <span>✘&nbsp;{{error}}</span>
+                    {% endfor %}
+                  </div>
+                  {% else %}
+                  {{form.email(class="form-control")}}
+                  {% endif %}
+                  {{form.email.label(class="form-control-label")}}
                 </div>
-                {% else %}
-                {{form.email(class="form-control")}}
-                {% endif %}
-                {{form.email.label(class="form-control-label")}}
               </div>
   
-              <div class="form-group">
-                {% if form.password.errors %}
-                {{form.password(class="form-control is-invalid")}}
-                <div class="invalid-feedback">
-                  {% for error in form.password.errors %}
-                  <span>✘&nbsp;{{error}}</span>
-                  {% endfor %}
+              <div class="container f-field">
+                <div class="form-group">
+                  {% if form.password.errors %}
+                  {{form.password(class="form-control is-invalid")}}
+                  <div class="invalid-feedback">
+                    {% for error in form.password.errors %}
+                    <span>✘&nbsp;{{error}}</span>
+                    {% endfor %}
+                  </div>
+                  {% else %}
+                  {{form.password(class="form-control")}}
+                  {% endif %}
+                  {{form.password.label(class="form-control-label")}}
                 </div>
-                {% else %}
-                {{form.password(class="form-control")}}
-                {% endif %}
-                {{form.password.label(class="form-control-label")}}
               </div>
   
               <div class="form-check">
@@ -72,7 +74,7 @@
               </div>
             </fieldset>
             <div class="form-group mt-4">
-              <div class="mr-2">{{form.submit(class="btn btn-success btn-shadow")}}</div>
+              <div class="mr-2">{{form.submit(class="btn btn-black")}}</div>
             </div>
           </form>
           <div class="border-top pt-3">

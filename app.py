@@ -45,7 +45,7 @@ def login():
     form = LoginForm()
     if form.validate_on_submit():
         if form.email.data == 'admin@kv.com' and form.password.data == 'password':
-            flash(f'You have been logged in!', category='success')
+            flash(f'You have been logged in!', category='primary')
             return redirect(url_for('home'))
         else:
             flash(f'Incorrect Credentials! Please check and try again!', category='danger')
