@@ -52,4 +52,14 @@ def login():
     return render_template('login.html', title='Login', form=form)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=6174, debug=True) 
+    # this config allows for the app to be run on the local network;
+    # accessible from the phone/tablet connected to the same WiFi netork as the laptop on which the app is running.
+
+    # to access the dev-server on the phone, follow these steps: 
+        # open a terminal => enter command => "ipconfig"
+        # look for something similar to => 'IPv4 Address. . . . . . . . . . . : 192.168.XX.XXX'
+        # on your phone access the IP => 192.168.XX.XXX:6174 to view the running application.
+
+    # to run the app only in the default localhost:5000 or 127.0.0.1:5000, replace line 'app.run()' with
+    # app.run(debug=True)
