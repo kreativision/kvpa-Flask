@@ -3,6 +3,7 @@ from flask_sqlalchemy import SQLAlchemy
 from dbConfig import db
 from forms import RegistrationForm, LoginForm
 from markupsafe import Markup
+from res_ap.res_ap import res_ap
 
 
 app = Flask(__name__)
@@ -10,6 +11,8 @@ app.config['SECRET_KEY'] = '72a11398ef34db96b2cc7293218cbf49'
 db_config = f'{db.category}://{db.user}:{db.pwd}@{db.url}:{db.port}/{db.name}'
 app.config['SQLALCHEMY_DATABASE_URI'] = db_config
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+
+app.register_blueprint(res_ap, url_prefix='/res_ap')
 
 db = SQLAlchemy(app)
 
@@ -60,6 +63,9 @@ if __name__ == '__main__':
         # open a terminal => enter command => "ipconfig"
         # look for something similar to => 'IPv4 Address. . . . . . . . . . . : 192.168.XX.XXX'
         # on your phone access the IP => 192.168.XX.XXX:6174 to view the running application.
+    
+    # The app would still be accessible on localhost, but with port 6174; go to 'localhost:6174'
 
-    # to run the app only in the default localhost:5000 or 127.0.0.1:5000, replace line 'app.run()' with
-    # app.run(debug=True)
+    # to run the app ONLY in the default localhost:5000 or 127.0.0.1:5000, replace line 
+    # 'app.run(host='0.0.0.0', port=6174, debug=True)' with
+    # 'app.run(debug=True)'
