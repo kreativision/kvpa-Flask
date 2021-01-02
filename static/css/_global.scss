@@ -133,3 +133,15 @@ main {
 button.close:focus {
     outline: $focus-outline;
 }
+
+
+.glass-card {
+    background-color: $card-bg-transparent !important;
+    backdrop-filter: $card-transparency;
+    border-radius: 20px;
+    .card-header {
+        border-bottom: $card-border !important;
+        background-color: transparent !important;
+        border-bottom: none !important;
+    }
+}

@@ -1,0 +1,49 @@
+@import "../../../static/css/_global.scss";
+
+html {
+    background-image: url("../images/res_gr.png");
+}
+
+main {
+    margin-top: 25px;
+}
+
+@media only screen and (max-width: 992px) {
+    #left-nav {
+        display: none;
+    }
+
+    #right-nav {
+        display: block;
+    }
+}
+
+.card {
+    .list-group-item {
+        background-color: transparent !important;
+        transition: all 0.3s ease-in-out;
+        text-transform: uppercase;
+        color: white;
+        &:last-child {
+            border-radius: 0px 0px 20px 20px !important;
+        }
+        &:not(:last-child) {
+            border-bottom: 1px solid rgba($color: #ffffff, $alpha: 0.5) !important;
+        }
+        &:hover, &:focus {
+            background-image: linear-gradient(90deg, #ffffffff, #ffffff00);
+            color: black !important;
+            text-shadow: 2px 2px 5px rgba($color: #000000, $alpha: 0.7) !important;
+            padding-left: 30px;
+            outline: none !important;
+            font-weight: 600;
+        }
+    }
+    .active {
+        text-shadow: 2px 2px 5px rgba($color: #000000, $alpha: 0.7) !important;
+        background-image: linear-gradient(90deg, #ffffffff, #ffffff00);
+        color: black !important;
+        font-weight: 600;
+        border-top: none !important;
+    }
+}

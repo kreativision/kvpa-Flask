@@ -2,8 +2,7 @@
     "liveSassCompile.settings.formats": [
         {
             "extensionName": ".css",
-            "format": "compressed",
-            "savePath": "/static/css"
+            "format": "compressed"
         }
     ],
     "liveSassCompile.settings.excludeList": [
@@ -14,5 +13,6 @@
     "liveSassCompile.settings.autoprefix": [
         "> 1%",
         "last 2 versions"
-    ]
+    ],
+    "python.formatting.provider": "black"
 }
