@@ -48,6 +48,9 @@ html {
             position: relative;
             margin-top: 1rem !important;
             margin-bottom: 0.5rem !important;
+            #username {
+                text-transform: capitalize;
+            }
             .form-control {
                 background-color: transparent !important;
                 color: $active-field !important;

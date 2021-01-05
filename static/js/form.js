@@ -35,15 +35,3 @@ function togglePassword() {
     }
   });
 }
-
-// registers the username field on register page.
-// function to automatically capitalize first letter of every word in the name field.
-var username = document.getElementById('username');
-if (username) {
-  username.onkeyup = function () {
-    value = username.value;
-    username.value = value.split(" ").map((s) => {
-      return s.charAt(0).toUpperCase() + s.substring(1).toLowerCase();
-    }).join(" ");
-  };
-}
