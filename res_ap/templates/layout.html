@@ -26,15 +26,14 @@
                         (url_for('res_ap.edu'), 'edu', 'Education'),
                         (url_for('res_ap.skills'), 'skills', 'Skills'),
                         (url_for('res_ap.projects'), 'projects', 'Projects'),
-                        (url_for('res_ap.hobbies'), 'hobbies', 'Hobbies & Interests')
-                        
-                        ] -%}
+                        (url_for('res_ap.hobbies'), 'hobbies', 'Hobbies & Interests')] -%}
                         {% set active = active|default('intro') -%}
                         <ul class="list-group list-group-flush text-white">
                             {% for href, id, caption in navLinks %}
-                            <a href=" {{href|e}} " class=" {{'list-group-item list-group-item-action active' 
+                            <a href=" {{href|e}} " 
+                                class="{{'list-group-item list-group-item-action active' 
                                     if active == id 
-                                    else 'list-group-item list-group-item-action'}} "> {{caption|e}} </a>
+                                    else 'list-group-item list-group-item-action'}}"> {{caption|e}} </a>
                             {% endfor %}
                         </ul>
                     </div>
